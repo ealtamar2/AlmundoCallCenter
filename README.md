@@ -18,9 +18,9 @@ Existe un call center donde hay 3 tipos de empleados: operador, supervisor y dir
 
 ## Description
  
-- Para la ejecucion de la prueba se utilizo la case ThreadPoolExecutor de Java. En la implementacion se simula un newFixedThreadPool con un máximo de 10 threads, esto significa que si más de 10 tareas se envían a ejecutar sólo 5 se ejecutaran y el resto se bloqueará hasta que haya un thread libre para procesarlos dando solucion cuando no hay Empleados disponbles para atender las llamadas. Sin embargo, tambien se implementas los test con JUnit donde se demuestra lo anterior.
+- Para la ejecución de la prueba se utilizó la clase ThreadPoolExecutor de Java. En la implementación se simula un newFixedThreadPool con un número máximo de 10 hilos (threads), esto significa que si más de 10 tareas se envían a ejecutar sólo 10 se ejecutarán y el resto se bloqueará o se encolan hasta que haya un thread libre para procesarlos dando solución cuando no hay Empleados disponibles para atender las llamadas. Sin embargo, también se implementan los test con JUnit donde se demuestra lo anterior.
 
-- Para la solucion de mas de 10 llamas concurrentes y/o cuando no hay empleados libres, se usa la cola LinkedBlockingQueue por defecto del ExecutorService, ya que esta maneja un bloqueo mientras no hayan recursos disponibles, una vez se liberen los recursos esta toma las llamadas en espera automatcamente. 
+- Para la solución de más de 10 llamadas concurrentes y/o cuando no hay empleados libres, se usa la cola LinkedBlockingQueue por defecto del ExecutorService, ya que esta maneja un bloqueo mientras no haya recursos disponibles, una vez se liberen los recursos esta toma las llamadas en espera automáticamente. 
 
 ## Authors
 
