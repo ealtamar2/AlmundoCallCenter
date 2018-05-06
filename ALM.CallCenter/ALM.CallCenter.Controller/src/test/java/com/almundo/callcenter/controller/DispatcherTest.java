@@ -47,14 +47,14 @@ public class DispatcherTest {
 
 		IntStream.range(0, 10).forEach(i -> dispatcher
 				.dispatchCall(new Call(System.nanoTime(), Constant.CALL_MIN_DURATION, Constant.CALL_MAX_DURATION)));
-		// dispatcher.shutdown();
+		 dispatcher.shutdown();
 
 	}
 
 	/**
 	 * Dispatches ten concurrent calls
 	 */
-	// @Test
+	 @Test
 	public void dispatchTenConcurrentCallsWithFourEmployee() {
 
 		EmployeeManager employeeManager = new EmployeeManager(2, 1, 1);
