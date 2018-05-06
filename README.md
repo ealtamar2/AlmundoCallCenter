@@ -22,6 +22,15 @@ Existe un call center donde hay 3 tipos de empleados: operador, supervisor y dir
 
 - Para la solución de más de 10 llamadas concurrentes y/o cuando no hay empleados libres, se usa la cola LinkedBlockingQueue por defecto del ExecutorService, ya que esta maneja un bloqueo mientras no haya recursos disponibles, una vez se liberen los recursos esta toma las llamadas en espera automáticamente. 
 
+## Languages & tools
+
+- Java SDK 1.8.0_77
+- Maven
+- JUnit
+- Eclipse Java EE IDE for Web Developers. Version: Mars.2 Release (4.5.2)
+
+
+
 ## Authors
 
 * **Eduardo Altamar* - *Initial work* - [ealtamar2](https://github.com/ealtamar2)
