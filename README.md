@@ -16,9 +16,11 @@ Existe un call center donde hay 3 tipos de empleados: operador, supervisor y dir
 ![Alt text](https://raw.githubusercontent.com/ealtamar2/AlmundoCallCenter/master/DiagramaUMLAlmundo.png?raw=true "Diagrama UML")
 
 
-## Deployment
+## Description
  
-Para la ejecucion de la prueba se utilizo la case ThreadPoolExecutor de Java. En la implementacion se simula un newFixedThreadPool con un máximo de 10 threads, esto significa que si más de 10 tareas se envían a ejecutar sólo 5 se ejecutaran y el resto se bloqueará hasta que haya un thread libre para procesarlos dando solucion cuando no hay Empleados disponbles para atender las llamadas. Sin embargo, tambien se implementas los test con JUnit donde se demuestra lo anterior.
+- Para la ejecucion de la prueba se utilizo la case ThreadPoolExecutor de Java. En la implementacion se simula un newFixedThreadPool con un máximo de 10 threads, esto significa que si más de 10 tareas se envían a ejecutar sólo 5 se ejecutaran y el resto se bloqueará hasta que haya un thread libre para procesarlos dando solucion cuando no hay Empleados disponbles para atender las llamadas. Sin embargo, tambien se implementas los test con JUnit donde se demuestra lo anterior.
+
+- Para la solucion de mas de 10 llamas concurrentes y/o cuando no hay empleados libres, se usa la cola LinkedBlockingQueue por defecto del ExecutorService, ya que esta maneja un bloqueo mientras no hayan recursos disponibles, una vez se liberen los recursos esta toma las llamadas en espera automatcamente. 
 
 ## Authors
 
